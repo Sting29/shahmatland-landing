@@ -395,11 +395,15 @@ body {
   border-radius: 38px;
   margin-bottom: 40px;
   border: 2px solid #3e302a;
+  transition: border-color 0.2s;
   background-color: #fff;
   font-size: 1.5rem;
   font-weight: 600;
   box-sizing: border-box;
   padding: 40px;
+}
+.contact-input.error {
+  border-color: #e74c3c !important;
 }
 
 .contact-btn {
@@ -423,18 +427,11 @@ body {
 }
 
 .footer {
-  background: #aeefff;
-  color: #2a6edb;
+  background-color: #b4e442;
   text-align: center;
   padding: 40px 0 32px 0;
-  margin-top: 48px;
-  border-top-left-radius: 48px;
-  border-top-right-radius: 48px;
 }
 
-.footer h2 {
-  font-size: 2rem;
-}
 .footer p {
   font-size: 1.1rem;
   margin-bottom: 1.2rem;

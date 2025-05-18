@@ -1,6 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@800&display=swap");
+
 body {
   margin: 0;
-  font-family: "Alef", "Arial", sans-serif;
+  font-family: "Inter", "Alef", "Arial", sans-serif;
   background: #eafcff;
   color: #222;
   direction: rtl;
@@ -15,16 +18,21 @@ body {
 }
 
 .navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   height: 96px;
   padding: 0 20px;
   background: #006acd;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  z-index: 10;
 }
 
 .navbar-container {
+  position: relative;
   max-width: 1440px;
   margin: 0 auto;
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -40,17 +48,18 @@ body {
   z-index: 1;
 }
 .nav-links {
+  height: 100%;
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 16px;
 }
 .nav-link {
   color: #fff;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 600;
   font-size: 1.9rem;
   padding: 6px 12px;
-  border-radius: 8px;
+  border-radius: 16px;
   transition: background 0.2s;
 }
 .nav-link:hover {
@@ -98,7 +107,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   height: 1080px;
-  /* padding: 40px 0 0 0; */
+  padding-top: 96px;
   position: relative;
   overflow: hidden;
 }
@@ -111,81 +120,105 @@ body {
 
 .cloud0 {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: -90px;
+  right: -200px;
   width: 546px;
   height: 162px;
+  z-index: 0;
 }
-
 .cloud1 {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 12px;
+  left: 120px;
   width: 412px;
   height: 123px;
 }
-
 .cloud2 {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 180px;
+  right: -360px;
   width: 473px;
   height: 188px;
 }
+.ship {
+  position: absolute;
+  left: 0;
+  top: 260px;
+}
+.knight {
+  position: absolute;
+  right: -50px;
+  top: 560px;
+}
+.pawn {
+  position: absolute;
+  left: 400px;
+  top: 600px;
+}
 
-/* .hero-graphics {
-  position: relative;
-  width: 100%;
-  min-height: 180px;
-} */
-.ship-img {
-  position: absolute;
-  right: 0;
-  top: 0;
+.hero-text {
+  width: 560px;
+  text-align: start;
+  align-self: flex-start;
+  z-index: 1;
+  padding-left: 80px;
+  margin-right: 120px;
+  margin-top: 140px;
 }
-.knight-img {
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-.pawn-img {
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-/* .hero-text {
-  margin-top: 180px;
-} */
-.hero-text h1 {
-  font-size: 2.2rem;
-  color: #2a6edb;
+.hero-title {
+  font-family: "Rubik", sans-serif;
+  font-weight: 800;
+  font-size: 5rem;
+  line-height: 1;
+  color: #fff7db;
   margin-bottom: 0.5rem;
-  text-shadow: 1px 2px 0 #fff;
+  -webkit-text-stroke: 1px #3e302a;
 }
+
 .subtitle {
-  color: #444;
-  font-size: 1.1rem;
-  margin-bottom: 1.2rem;
+  color: #169aa7;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  font-weight: 800;
 }
 .cta-btn {
-  display: inline-block;
-  background: #2a6edb;
-  color: #fff;
-  font-weight: bold;
-  font-size: 1.1rem;
-  border-radius: 24px;
-  padding: 12px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 516px;
+  height: 98px;
+  color: #fff7db;
   text-decoration: none;
-  box-shadow: 0 2px 8px rgba(42, 110, 219, 0.08);
   transition: background 0.2s;
+  background-image: url(images/button-blue.png);
+  background-color: transparent;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-size: 2rem;
+  font-weight: 700;
+  box-sizing: border-box;
+  padding-bottom: 16px;
 }
 .cta-btn:hover {
-  background: #1b4e8a;
+  transform: scale(1.05);
 }
 
 .section {
   padding: 48px 0 0 0;
 }
+
+.who-for-section {
+  background-image: url(images/background_2.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #7bedf8;
+  height: 1080px;
+  position: relative;
+  overflow: hidden;
+}
+
 .who-content,
 .why-content {
   display: flex;
@@ -275,9 +308,7 @@ body {
     flex-direction: column;
     gap: 18px;
   }
-  .hero-graphics {
-    min-height: 120px;
-  }
+
   .hero-text {
     margin-top: 120px;
   }
